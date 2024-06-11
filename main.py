@@ -4,11 +4,11 @@ from ldclient import Config
 from ld_openfeature import LaunchDarklyProvider
 from os import getenv
 
-sdk_key = getenv("LAUNCHDARKLY_SERVER_KEY", "")
+sdk_key = getenv("LAUNCHDARKLY_SDK_KEY", "")
 flag_key = getenv("LAUNCHDARKLY_FLAG_KEY", "")
 
 if sdk_key == "":
-    print("*** Set the 'LAUNCHDARKLY_SERVER_KEY' environment variable before running this script")
+    print("*** Set the 'LAUNCHDARKLY_SDK_KEY' environment variable before running this script")
     exit(1)
 elif flag_key == "":
     print("*** Set the 'LAUNCHDARKLY_FLAG_KEY' environment variable before running this script")
