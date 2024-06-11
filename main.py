@@ -24,4 +24,4 @@ client = api.get_client()
 context = EvaluationContext("example-user-key", {"name": "Sandy"})
 
 flag_value = client.get_boolean_value(flag_key, False, context)
-print(f"*** Feature flag '{flag_key}' is {flag_value} for this context")
+print(f"*** Feature flag '{flag_key}' evaluates to {'true' if flag_value else 'false'}.")
