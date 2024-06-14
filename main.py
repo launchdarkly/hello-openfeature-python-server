@@ -4,11 +4,11 @@ from ldclient import Config
 from ld_openfeature import LaunchDarklyProvider
 from os import getenv
 
-sdk_key = getenv("LAUNCHDARKLY_SERVER_KEY", "")
+sdk_key = getenv("LAUNCHDARKLY_SDK_KEY", "")
 flag_key = getenv("LAUNCHDARKLY_FLAG_KEY", "")
 
 if sdk_key == "":
-    print("*** Set the 'LAUNCHDARKLY_SERVER_KEY' environment variable before running this script")
+    print("*** Set the 'LAUNCHDARKLY_SDK_KEY' environment variable before running this script")
     exit(1)
 elif flag_key == "":
     print("*** Set the 'LAUNCHDARKLY_FLAG_KEY' environment variable before running this script")
@@ -24,4 +24,4 @@ client = api.get_client()
 context = EvaluationContext("example-user-key", {"name": "Sandy"})
 
 flag_value = client.get_boolean_value(flag_key, False, context)
-print(f"*** Feature flag '{flag_key}' is {flag_value} for this context")
+print(f"*** The {flag_key} feature flag evaluates to {flag_value}.")

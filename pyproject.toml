@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-launchdarkly-openfeature-server = "^0.1.0"
+launchdarkly-openfeature-server = "^0.2.0"
 
 
 [build-system]
