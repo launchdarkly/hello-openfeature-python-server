@@ -11,6 +11,7 @@ updates:
 
   - package-ecosystem: 'pip'
     directory: '/'
+    versioning-strategy: 'increase'
     schedule:
       interval: 'monthly'
     cooldown:
